@@ -1,2 +1,2 @@
-# navReg
+# navReg.github.io
  
