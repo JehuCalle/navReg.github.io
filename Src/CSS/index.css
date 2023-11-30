@@ -2,6 +2,10 @@ body{
   font-family: Cascadia Code;
 }
 
+button {
+  box-shadow: none !important;
+}
+
 .barraNavegador {
   display: flex;
   align-items: center;
@@ -34,8 +38,22 @@ body{
   align-items: center;
   background-color: rgb(0, 46, 46);
 }
+.contenedorControlVolumen {
+  width: 190px;
+  padding: 0px 10px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.controlVolumen {
+  width: 100px;
+}
+.contenedorBotonDetener {
+  padding: 0px 10px 0px 0px;
+}
 .colorBotonDesplegable {
   color: white;
+  font-weight: 300;
   background-color: rgb(0, 97, 97);
 }
 .estiloBotonMusica {
@@ -49,7 +67,7 @@ body{
 }
 
 .divContenedorCuerpo {
-  height: 800px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,7 +96,7 @@ body{
 }
 
 .primerDiv {
-  height: 700px;
+  height: 620px;
   /*width: 1800px;*/
   display: flex;
   flex-direction: column;
@@ -87,12 +105,8 @@ body{
   background-color: rgb(52, 88, 88);
   position: absolute;
 }
-.imagenTamaño{
-  height: 100%;
-  width: 100%;
-}
 .segundoDiv {
-  height: 700px;
+  height: 620px;
   /*width: 1800px;
   */display: flex;
   flex-direction: column;
@@ -103,7 +117,7 @@ body{
   position: absolute;
 }
 .tercerDiv {
-  height: 700px;
+  height: 620px;
   /*width: 1800px;
   */display: flex;
   flex-direction: column;
@@ -112,6 +126,10 @@ body{
   /*background-color: rgb(0, 37, 37);
   */transition: transform 0.5s ease-in-out;
   position: absolute;
+}
+.imagenTamaño{
+  height: 100%;
+  width: 100%;
 }
 
 

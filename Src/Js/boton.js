@@ -43,7 +43,7 @@ btnCentroIzquierda.addEventListener('click', (e) => {
   }
 });
 
-
+const btnDetener = document.querySelector("#btnDetener");
 let contM1 = 0;
 const musica1 = document.querySelector("#musica1");
 const btnMusica1 = document.querySelector("#btnMusica1");
@@ -53,6 +53,16 @@ const btnMusica2 = document.querySelector("#btnMusica2");
 const btnMusica3 = document.querySelector("#btnMusica3");
 const btnMusica4 = document.querySelector("#btnMusica4");
 const btnMusica5 = document.querySelector("#btnMusica5");
+
+btnDetener.addEventListener( 'click', (e) => {
+  e.preventDefault();
+  musica1.pause();
+  musica1.currentTime = 0;
+  contM1 = 0;
+  musica2.pause();
+  musica2.currentTime = 0;
+  contM2 = 0;
+});
 
 btnMusica1.addEventListener( 'click', (e) => {
   e.preventDefault();
@@ -86,4 +96,17 @@ btnMusica2.addEventListener( 'click', (e) => {
     musica2.currentTime = 0;
     contM2 -= 1;
   };
+});
+
+const controlVolumen = document.querySelector("#controlVolumen");
+
+controlVolumen.value = 0.1;
+musica1.volume = controlVolumen.value;
+musica2.volume = controlVolumen.value;
+
+controlVolumen.addEventListener( 'input', (e) => {
+  e.preventDefault();
+
+  musica1.volume = controlVolumen.value;
+  musica2.volume = controlVolumen.value;
 });
