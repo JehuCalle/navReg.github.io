@@ -42,3 +42,48 @@ btnCentroIzquierda.addEventListener('click', (e) => {
     contPag2 -=1
   }
 });
+
+
+let contM1 = 0;
+const musica1 = document.querySelector("#musica1");
+const btnMusica1 = document.querySelector("#btnMusica1");
+let contM2 = 0;
+const musica2 = document.querySelector("#musica2");
+const btnMusica2 = document.querySelector("#btnMusica2");
+const btnMusica3 = document.querySelector("#btnMusica3");
+const btnMusica4 = document.querySelector("#btnMusica4");
+const btnMusica5 = document.querySelector("#btnMusica5");
+
+btnMusica1.addEventListener( 'click', (e) => {
+  e.preventDefault();
+
+  musica2.pause();
+  musica2.currentTime = 0;
+  contM2 = 0;
+
+  if( contM1 === 0){
+    musica1.play();
+    contM1 += 1;
+  }else if ( contM1 === 1){
+    musica1.pause();
+    musica1.currentTime = 0;
+    contM1 -= 1;
+  };
+});
+
+btnMusica2.addEventListener( 'click', (e) => {
+  e.preventDefault();
+
+  musica1.pause();
+  musica1.currentTime = 0;
+  contM1 = 0;
+
+  if( contM2 === 0){
+    musica2.play();
+    contM2 += 1;
+  }else if ( contM2 === 1){
+    musica2.pause();
+    musica2.currentTime = 0;
+    contM2 -= 1;
+  };
+});
